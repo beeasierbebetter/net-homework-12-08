@@ -221,7 +221,7 @@ sudo mysql sakila \
 ```
 sudo mysqlbinlog \
 /var/log/mysql/mysql-bin.000005 \
-| sudo mysql sakila_restore
+| sudo mysql sakila
 ```
 
 Либо, если восстановление нужно до определенного времени, то выполню, например:
@@ -229,7 +229,7 @@ sudo mysqlbinlog \
 sudo mysqlbinlog \
 --stop-datetime="2026-07-14 21:20:00" \
 /var/log/mysql/mysql-bin.000005 \
-| sudo mysql sakila_restore
+| sudo mysql sakila
 ```
 
 3.1* Использование реплики дает преимущество перед обычным бэкапом в случаях:
